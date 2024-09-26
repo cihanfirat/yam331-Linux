@@ -1,0 +1,38 @@
+Uygulama 1 
+YAM 331 - LINUX SİSTEM YÖNETİMİ 
+Proje Dizini Oluşturma ve Dosya Yönetimi 
+
+SENARYO: Bir yazılım projesi üzerinde çalışmaya başlıyorsunuz. Bu proje için belirli bir dizin yapısı 
+oluşturmanız ve gerekli dosyaları hazırlamanız gerekiyor. Aşağıdaki görevleri adım adım yerine getirin:
+
+GÖREVLER: 
+1. Dizin Oluşturma: 
+• Kendi Ev dizininizde bir proje dizini oluşturun. Bu dizinin adı "YazilimProjesi" olsun. 
+  
+2. Alt Dizinler Oluşturma: 
+• YazilimProjesi dizini altında şu alt dizinleri oluşturun: 
+• src (kaynak kodlar için) 
+• docs (belgeler için) 
+• tests (test dosyaları için) 
+
+3. Dosya Oluşturma: 
+• src dizinine geçiş yapın ve aşağıdaki dosyaları oluşturun: 
+• main.py (ana Python dosyası) 
+• utils.py (yardımcı işlevler için) 
+
+4. Test Dosyası Oluşturma: 
+• tests dizinine gidin ve proje testlerini içerecek bir dosya oluşturun. Bu dosyanın adı test_main.py 
+olsun. 
+  
+5. Belge Dosyası Oluşturma: 
+• docs dizinine gidin ve proje ile ilgili belgeleri içerecek proje_tanimi.txt dosyasını oluşturun. 
+
+6. Dosya ve Dizinleri Görüntüleme: 
+• YazilimProjesi dizininde bulunan tüm dizinleri ve dosyaları, her birinin isimlerini görüntüleyin. 
+  
+7. Dosya İçeriği Kontrolü: 
+• main.py ve proje_tanimi.txt dosyalarının içeriğini görüntüleyin (henüz boş olacaklar). 
+  
+Bonus Görev: 
+• docs dizininde ek bir dosya oluşturun ve adı kullanim_kilavuzu.txt olsun. Bu dosyanın var olup olmadığını 
+kontrol edin ve dizindeki diğer dosyaları da görüntüleyin. 
