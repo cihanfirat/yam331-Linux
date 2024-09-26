@@ -1,0 +1,50 @@
+pwd (print working directory) show the current directory
+--------------------------------------------------------------------------------------------------------------------
+ls (list) list directory contents. Takes different parameters
+ls -l -> list directory contents
+ls -a (all) -> do not ignore entries starting with .
+--------------------------------------------------------------------------------------------------------------------
+man - an interface to the system reference manuals. Gives detailed information about command
+man ls
+
+--help same?
+ls --help
+--------------------------------------------------------------------------------------------------------------------
+cd (change directory) -> change active directory.
+cd path -> goes to entered directory.
+cd .. -> bir üst dizine cıkar
+cd ~ -> ana dizine gider
+--------------------------------------------------------------------------------------------------------------------
+mkdir->make directories.
+--------------------------------------------------------------------------------------------------------------------
+touch dosya olusturur.
+touch dosya.txt
+--------------------------------------------------------------------------------------------------------------------
+cat (concatenate)
+cat dosya.txt dosya içeriğini görüntüler.
+cat > dosya.txt / dosyanın içine yazı yazmamızı sağlar. ctrl+d -> çıkar. Doğrudan üzerine yazar. Eski yazılar gider
+cat >> dosya.txt dosyanın devamına yazar eskisi silinmez.
+echo "1,2,3" >> dosya.txt 
+--------------------------------------------------------------------------------------------------------------------
+echo "merhaba"
+--------------------------------------------------------------------------------------------------------------------
+nano deneme.txt -> nano dosyası olusturur.
+--------------------------------------------------------------------------------------------------------------------
+EXERCISE: 
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ nano gorevler.txt
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ ls
+deneme.txt  dosya.txt
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ nano gorevler.txt
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ ls
+deneme.txt  dosya.txt  gorevler.txt
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ cat > gorevler.txt 
+Proje sunumu hazirla
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ ls
+deneme.txt  dosya.txt  gorevler.txt
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ cat gorevler.txt 
+Proje sunumu hazirla
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ echo kitap oku >> gorevler.txt 
+030721027@std.izu.edu.tr@egc16-20:~/Desktop/ilkders/deneme$ cat gorevler.txt 
+Proje sunumu hazirla
+kitap oku
+
