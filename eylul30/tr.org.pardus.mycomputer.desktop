@@ -1,0 +1,149 @@
+030721027@std.izu.edu.tr@egc16-11:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+030721027@std.izu.edu.tr@egc16-11:~$ Desktop/
+bash: Desktop/: Is a directory
+030721027@std.izu.edu.tr@egc16-11:~$ cd Desktop/
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+tr.org.pardus.mycomputer.desktop
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ mkdir ders2
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+ders2  tr.org.pardus.mycomputer.desktop
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ cat dosya.txt
+cat: dosya.txt: No such file or directory
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ nano dosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ nano dosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+ders2  dosya.txt  tr.org.pardus.mycomputer.desktop
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ rm dosya.txt 
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+ders2  tr.org.pardus.mycomputer.desktop
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ man cat
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ nano dosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+ders2  dosya.txt  tr.org.pardus.mycomputer.desktop
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ mv dosya.txt yenidosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+ders2  tr.org.pardus.mycomputer.desktop  yenidosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls -l | grep "txt"
+-rw-r--r-- 1 030721027@std.izu.edu.tr 030721027@std.izu.edu.tr    3 Sep 30 10:44 yenidosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ 
+
+
+----------------------------------------------------------------------------------------------------------------
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ ls
+ders2  eylul30  tr.org.pardus.mycomputer.desktop  yenidosya.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ cat pardus.txt
+cat: pardus.txt: No such file or directory
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ nano pardus.txt
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ grep -n 'Free' pardus.txt 
+4:Free
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ cat pardus.txt 
+asdf
+asdf
+asd
+Free
+asdf
+Source
+asdfa
+3124
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ man grep
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ man gre
+No manual entry for gre
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ grep -c 'Source' pardus.txt 
+1
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ grep -m2 'Source' pardus.txt 
+Source
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ grep -e 'Debian' -e 'Source' pardus.txt 
+Source
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ grep -e 'Free' -e 'Source' pardus.txt 
+Free
+Source
+030721027@std.izu.edu.tr@egc16-11:~/Desktop$ grep -e 'free' -e 'Source' pardus.txt 
+Source
+
+----------------------------------------------------------------------------------------------------------------
+
+
+ALISTIRMA
+
+
+030721027@std.izu.edu.tr@egc16-11:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+030721027@std.izu.edu.tr@egc16-11:~$ cd Downloads/
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ ls
+system.log
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ cat system.log 
+Sep 30 10:01:45 server systemd[1]: Starting Cleanup of Temporary Directories...
+Sep 30 10:01:45 server systemd[1]: Finished Cleanup of Temporary Directories.
+Sep 30 10:05:12 server kernel: [123456.789012] warning: CPU temperature is high
+Sep 30 10:10:35 server sshd[12345]: Failed password for invalid user admin from 192.168.1.100 port 22 ssh2
+Sep 30 10:12:54 server sshd[12345]: Accepted password for user from 192.168.1.101 port 22 ssh2
+Sep 30 10:15:45 server systemd[1]: Starting User Manager for UID 1000...
+Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+Sep 30 10:16:07 server systemd[1]: Finished User Manager for UID 1000.
+Sep 30 10:20:34 server sshd[12345]: Failed password for invalid user guest from 192.168.1.102 port 22 ssh2
+Sep 30 10:25:12 server kernel: [123465.654321] warning: Low memory available on system
+Sep 30 10:30:00 server kernel: [123470.789123] error: Unable to access network interface
+Sep 30 10:35:12 server sshd[12345]: Failed password for invalid user admin from 192.168.1.103 port 22 ssh2
+Sep 30 10:40:23 server kernel: [123475.456789] critical: CPU temperature exceeds safe threshold
+Sep 30 10:45:15 server systemd[1]: Starting Backup Service...
+Sep 30 10:50:45 server systemd[1]: Finished Backup Service.
+Sep 30 10:55:12 server kernel: [123485.123987] warning: Disk space running low on /dev/sda1
+Sep 30 11:00:00 server kernel: [123490.456321] error: Failed to initialize network interface
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep 'error' system.log 
+Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+Sep 30 10:30:00 server kernel: [123470.789123] error: Unable to access network interface
+Sep 30 11:00:00 server kernel: [123490.456321] error: Failed to initialize network interface
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -c 'error' system.log 
+3
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -n 'error' system.log 
+7:Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+11:Sep 30 10:30:00 server kernel: [123470.789123] error: Unable to access network interface
+17:Sep 30 11:00:00 server kernel: [123490.456321] error: Failed to initialize network interface
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -c "warning"
+^Z  
+^X[1]+  Stopped                 grep --color=auto -c "warning"
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -c "warning" system.log 
+3
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ man grep
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -m2 "error"
+^X^H^X^C
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -m2 "error" system.log 
+Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+Sep 30 10:30:00 server kernel: [123470.789123] error: Unable to access network interface
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -e "error" -e "warning" system.log 
+
+
+Sep 30 10:05:12 server kernel: [123456.789012] warning: CPU temperature is high
+Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+Sep 30 10:25:12 server kernel: [123465.654321] warning: Low memory available on system
+Sep 30 10:30:00 server kernel: [123470.789123] error: Unable to access network interface
+Sep 30 10:55:12 server kernel: [123485.123987] warning: Disk space running low on /dev/sda1
+Sep 30 11:00:00 server kernel: [123490.456321] error: Failed to initialize network interface
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -e "error" system.log | grep 'Disk'
+Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep "disk" system.log 
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -i "disk" system.log 
+Sep 30 10:16:03 server kernel: [123460.123456] error: Disk quota exceeded on /dev/sda1
+Sep 30 10:55:12 server kernel: [123485.123987] warning: Disk space running low on /dev/sda1
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -n "password" system.log 
+4:Sep 30 10:10:35 server sshd[12345]: Failed password for invalid user admin from 192.168.1.100 port 22 ssh2
+5:Sep 30 10:12:54 server sshd[12345]: Accepted password for user from 192.168.1.101 port 22 ssh2
+9:Sep 30 10:20:34 server sshd[12345]: Failed password for invalid user guest from 192.168.1.102 port 22 ssh2
+12:Sep 30 10:35:12 server sshd[12345]: Failed password for invalid user admin from 192.168.1.103 port 22 ssh2
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -n -c "password" system.log 
+4
+030721027@std.izu.edu.tr@egc16-11:~/Downloads$ grep -n --color "password" system.log 
+4:Sep 30 10:10:35 server sshd[12345]: Failed password for invalid user admin from 192.168.1.100 port 22 ssh2
+5:Sep 30 10:12:54 server sshd[12345]: Accepted password for user from 192.168.1.101 port 22 ssh2
+9:Sep 30 10:20:34 server sshd[12345]: Failed password for invalid user guest from 192.168.1.102 port 22 ssh2
+12:Sep 30 10:35:12 server sshd[12345]: Failed password for invalid user admin from 192.168.1.103 port 22 ssh2
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
