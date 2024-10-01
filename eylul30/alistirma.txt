@@ -1,0 +1,9 @@
+Alıştırma:
+ 1. Log dosyasında "error" kelimesinin geçtiği satırları ve bu satırların numaralarını gösterin.
+ 2. "warning" kelimesinin kaç kez geçtiğini sayın.
+ 3. "error" kelimesinin geçtiği ilk iki satırı gösterin.
+ 4. Log dosyasında "error" ve "warning" kelimelerinin herhangi birini içeren satırları bulun.
+ 5. Log dosyasında hem "error" hem de "Disk" kelimelerini içeren satırları bulun.
+ 6. "disk" kelimesinin büyük/küçük harf farkına bakılmaksızın geçtiği tüm satırları gösterin.
+ 7. Log dosyasında "password" kelimesini içeren satırları bulun ve eşleşmeleri renkli olarak 
+gösterin.
