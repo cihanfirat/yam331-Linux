@@ -1,0 +1,60 @@
+2024
+Uygulama 2
+YAM 331 - LINUX SİSTEM YÖNETİMİ
+Müşteri Bilgileri Ve Log Yönetimi
+
+SENARYO: Bir IT departmanında çalışıyorsunuz ve şirketin müşteri verileriyle ilgileniyorsunuz. Şirketin
+müşteri bilgilerini düzenlemek, yedeklemek ve sistemdeki log dosyalarını analiz etmek gibi sorumluluklarınız
+var. Aşağıdaki görevleri yerine getirerek sistemin düzgün çalıştığından emin olun.
+Not: Uygulamada ihtiyacınız olacak error.log ve temp.txt dosyasına Moodle sisteminden erişebilirsiniz.
+
+GÖREVLER:
+1. Müşteri Bilgilerini Düzenlemek:
+Şirket, her müşterinin bilgilerini ayrı klasörlerde saklıyor. İlk göreviniz, müşteri klasörlerini düzenlemek ve
+eksik bilgileri tamamlamak.
+• "musteriler" adında bir klasör oluşturun ve her müşteri için ayrı klasörler açın:
+o "musteri_A"
+o "musteri_B"
+o "musteri_C"
+• "musteri_A" klasörünün içine bir "bilgiler.txt" dosyası oluşturun ve bu dosyaya müşteri bilgilerini
+ekleyin:
+o İsim: Ali Demir
+o Telefon: 05412345678
+o Email: ali@example.com
+• "musteriler" dizinindeki tüm müşteri klasörlerini listeleyin.
+2. Müşteri Bilgilerini Yedekleme ve Kopyalama:
+Müşteri bilgilerini düzenledikten sonra bu dosyaları yedeklemeniz gerekiyor.
+• Müşteri bilgilerini "yedekler" adlı bir klasörde yedekleyin. "musteriler" klasörünü yedekler klasörüne
+kopyalayın.
+• Yedeklenen dosyaların başarıyla kopyalanıp kopyalanmadığını kontrol edin. Hem "musteriler" hem
+de "yedekler/musteriler" klasörlerinin içindeki dosyaları listeleyin.
+3. Müşteri Bilgilerinde Değişiklik Yapma:
+Bir müşteri, telefon numarasının güncellenmesini talep etti. Bu talebi yerine getirin.
+• "musteri_A" klasöründeki "bilgiler.txt" dosyasındaki telefon numarasını "05498765432" olarak
+değiştirin.
+• Telefon numarasının doğru güncellendiğini kontrol etmek için dosyanın içeriğini görüntüleyin.
+4. Hata Loglarını İnceleme:
+Şirket sunucusunda bazı hatalar meydana geliyor. Log dosyalarını inceleyerek bu hataları bulmanız gerekiyor.
+• /var/log/ dizinindeki "error.log" dosyasının içeriğini görüntüleyin ve sistemde meydana gelen hataları
+kontrol edin.
+• "error.log" dosyasındaki sadece "ERROR" kelimesini içeren satırları bulun.
+• "ERROR" kelimesi geçen satırlardaki hata kodlarını (örneğin, "ERROR 404" veya "ERROR 500")
+bulun ve ikinci kelimeyi çekin.
+5. Sorunlu Dosyaları Temizleme:
+Bazı müşteri klasörlerinde gereksiz dosyalar bulunuyor ve bu dosyaların silinmesi gerekiyor.
+• Senaryo gereği temp dosyası oluşturulmalıdır. Bunun için "musteri_A" klasörüne gidin ve "temp.txt"
+dosyasını oluşturun.
+• Oluşturduğunuz "temp.txt" dosyasını diğer müşteri klasörlerine kopyalayın.
+• "musteriler" dizinindeki tüm klasörlerde bulunan "temp.txt" adlı gereksiz dosyaları tespit edin ve
+silin.
+• "musteri_C" klasörü artık kullanılmıyor. Bu klasörü ve içeriğini tamamen kaldırın.
+6. Dosya Güncellemelerini Raporlama:
+Sistem yöneticiniz, müşteri bilgilerini içeren dosyalardaki güncellemeler hakkında bir rapor istiyor. Her
+dosyanın içeriğini kontrol ederek rapor hazırlayın.
+• Müşteri dosyalarındaki "Ali" ismini içeren satırları bulun.
+• Bu bilgileri rapor dosyasına yazdırın. Sonuçları bir "guncelleme_raporu.txt" dosyasına kaydedin.
+• Raporun içeriğini kontrol edin.
+7. Dosya Taşıma ve Yedekleme Güncelleme:
+• Yeni müşteri dosyalarını yedekleme sistemine eklemeniz gerekiyor.
+• "musteri_B" klasörünü "yedekler" dizinine taşıyın ve yedekleme güncellemesini yapın.
+• Yedeklenen dosyanın başarıyla taşınıp taşınmadığını kontrol edin.

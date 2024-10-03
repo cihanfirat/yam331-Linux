@@ -1,0 +1,4 @@
+Merhaba, dünya!
+Bu bir deneme dosyasidir.
+Linux Sistem Yonetimi
+Phython ve C++ programlama dilleri

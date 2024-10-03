@@ -1,0 +1,13 @@
+[2024-10-01 12:15:43] INFO: Sunucu baslatildi.
+[2024-10-01 12:16:07] ERROR 404: /images/logo.png dosyasi bulunamadi.
+[2024-10-01 12:16:15] INFO: Kullanici 'admin' giris yapti.
+[2024-10-01 12:17:22] ERROR 500: Veritabani baglantisi basarisiz.
+[2024-10-01 12:18:05] INFO: Yedekleme islemi basarili.
+[2024-10-01 12:19:10] ERROR 403: Yetkisiz erisim denemesi.
+[2024-10-01 12:20:45] INFO: Yeni musteri kaydi olusturuldu.
+[2024-10-01 12:22:30] ERROR 502: Sunucu yanit vermiyor.
+[2024-10-01 12:24:12] INFO: Sistem guncellemesi tamamlandi.
+[2024-10-01 12:25:40] ERROR 404: /docs/readme.txt dosyasi bulunamadi.
+[2024-10-01 12:26:53] INFO: Kullanici 'guest' cikis yapti.
+[2024-10-01 12:28:17] ERROR 500: Veritabani sorgusu zaman asimina ugradi.
+[2024-10-01 12:29:42] INFO: Sunucu kapaniyor.
