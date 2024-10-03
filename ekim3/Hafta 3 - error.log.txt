@@ -1,0 +1,13 @@
+[2024-10-01 12:15:43] INFO: Sunucu başlatıldı.
+[2024-10-01 12:16:07] ERROR 404: /images/logo.png dosyası bulunamadı.
+[2024-10-01 12:16:15] INFO: Kullanıcı 'admin' giriş yaptı.
+[2024-10-01 12:17:22] ERROR 500: Veritabanı bağlantısı başarısız.
+[2024-10-01 12:18:05] INFO: Yedekleme işlemi başarılı.
+[2024-10-01 12:19:10] ERROR 403: Yetkisiz erişim denemesi.
+[2024-10-01 12:20:45] INFO: Yeni müşteri kaydı oluşturuldu.
+[2024-10-01 12:22:30] ERROR 502: Sunucu yanıt vermiyor.
+[2024-10-01 12:24:12] INFO: Sistem güncellemesi tamamlandı.
+[2024-10-01 12:25:40] ERROR 404: /docs/readme.txt dosyası bulunamadı.
+[2024-10-01 12:26:53] INFO: Kullanıcı 'guest' çıkış yaptı.
+[2024-10-01 12:28:17] ERROR 500: Veritabanı sorgusu zaman aşımına uğradı.
+[2024-10-01 12:29:42] INFO: Sunucu kapanıyor.

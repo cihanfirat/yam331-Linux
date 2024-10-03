@@ -1,0 +1,3 @@
+Bu bir deneme dosyasidir.
+Linux Sistem Yönetimi
+Java ve C++ programlama dilleri

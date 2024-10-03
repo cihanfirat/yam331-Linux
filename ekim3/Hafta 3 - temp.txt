@@ -1,0 +1,5 @@
+Geçici dosya verileri.
+Bu dosya sistemde gereksizdir ve silinmesi gerekiyor.
+DEBUG: Test çıktıları bu dosyada saklanmıştır.
+Not: Bu dosya önemli değildir.
+Log: 12345abcde geçici işlem ID'si.
