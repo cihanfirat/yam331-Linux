@@ -1,0 +1,22 @@
+KULLANICILAR VE YETKİLER
+sudo - root
+ * super user do -> root yetkisini alıyoruz.
+
+adduser -> yeni kullanıcı olustur.
+sudo adduser user_name
+ - bilgileri gir, doğrula.
+ - ev dizini olusturulur /home/cihan
+
+sudo su -> switch user
+visudo -> yetkiler yöneten dosyayı acmak icin
+/etc/sudoers - dosyasından kullanıcı yetkilerini ayarlayabilirsin
+
+deluser -> kullanıcı sil.
+sudo deluser kullanici_adi
+ - kullanici_adi sistemden kalkar, ancak kullanıcının ev dizinini
+ - veya dosyalarını silmez.
+sudo deluser --remove-home kullanici_adi ->kullanıcı ve ev dizini siler
+sudo deluser --remove-all-files -> tüm dosyalarıyla kaldırır.
+
+
+
