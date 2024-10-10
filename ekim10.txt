@@ -1,0 +1,39 @@
+ls -l -> sol taraf kullanıcı sag taraf grup
+en bastakiler yetkiler
+r -readable
+w -writeable
+x -executable
+d - directory
+
+gruba kullanıcı ekleme usermod -aG
+-a append yeni gruba ekleniğrken mevcut grupların korunması saglar.
+-G grups
+sudo usermod -aG grupadi kullanciadi
+sudo deluser kullaniciadi grupadi -> siler
+/etc/passwd -> bilgiler burda tutulur
+kullaniciID:grupID x-> sifre
+etc/group -> grup bilgileri burda tutulur
+sudo grupadd yenigrup
+sudo delgrup grupadi
+
+dosya sahini ve grubu degistirme
+chown changeowner
+sudo chown [yenisahip] [dosya_veya_dizin] - sadece sahip degisir
+sudo chown [yenisahip]:[yeni_grup] [dosya_veya_dizin] - hem sahibi hem de grubu degistirir.
+
+Yetki degistirme
+chmod - change mode
+chmod secenekler izinler dosy_adi
+chmod 755 dosya.txt
+r - 4
+w - 2
+x - 1
+owner group other
+
+chmod [kullanici_turu][islem][izin_turu][dosya_adi]
+chmod u=rwx,go=rx dosya.txt = koyunca sadece bu yetkileri verir
+chmod g+w dosya.txt -> var olan yetkiler üstüne write
++ yetki ekle
+- yetki cıkar
+= izinleri sabit olarak ayarla
+
