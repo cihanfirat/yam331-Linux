@@ -1,0 +1,47 @@
+				HAFTA - 5
+				SÜREC YONETİMİ
+
+* Bir bilgisayarda calısan her sey.
+* programın kodu,calısma sırasında kullanılan veriler,islemci kayıtları,bellek adresleri vs. tutulur.
+
+ps komutu
+sistemde calısan sürecler
+ps aux
+a tüm kullanıcılar
+u 
+x 	
+
+kullanıcı - processId
+
+ps -u kullanıcıAdi
+
+
+top komutu 
+dinamik olarak göster
+q-exit
+
+htop komutu
+daha gelismis
+
+chmod +x dosyadi -> dosyayı calıstırılabilir yap
+./message.sh
+ctrl + z -> exit
+
+jobs - aktif processler
+ödev - processi nasıl durdururuz ctrl+z alternatifi?
+
+fg(foreground) arkaplanda calısan bir süreci ön plana alır.
+fg %1 -> 1. sırada bulunan
+
+bg arkaplanda calıstır
+bg %1
+
+
+kill
+ killall
+ killall my_process
+ pkill
+ pkill -u user_name
+ xkill -> guı
+
+ödev yap!
