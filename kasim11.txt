@@ -1,0 +1,32 @@
+SHELL SCRIPT
+ 
+BASH SCRIPT
+-> Degiskenleri metin veya string olarak varsayılan kabul edilir
+* degisken="merhaba" eşittir etrafında bosluk olmamalı.
+* degisken isimler harf veya _ ile baslar
+* buyuk kucuk harf duyarlı
+
+* $ degisken degerini cagırır
+- echo $degisken
+
+* cevresel degisken icin export
+- export YENİ_DEGISKEN="merhaba"
+
+* aritmetik islemler -> 2 yol
+- 1- expr komutu
+- sonuc=$(expr 3+5)
+- echo $sonuc
+
+- 2- $((..))
+- sonuc=$((3+5))
+- echo $sonuc
+-> ornek1.sh  (calıstırılabilir yapmak icin chmod +x ornek1.sh)
+
+* aritmetik operatorler +-*/%
+- bc kullanmalısın (basic calculator)
+- ondalık sayılarla islemler
+- gelismis mat fonksiyonlari
+- hassasiyet ayarlari
+- echo "3.4 + 5.2" |bc -> sonuc ondalıklı doner
+- echo "scale=2; 10/3" |bc -> noktadan sonra 2 basamak
+-> ornek2.sh,ornek3.sh
