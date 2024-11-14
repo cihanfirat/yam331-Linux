@@ -26,30 +26,19 @@ Girdi Cıktı islemleri
 
  -----------------------------
  if[ kosul ]
- 
  then
- 
   #komutlar
-  
  else
- 
   #komutlar
-  
  fi
 -------------------------------
 
  if[ kosul1]
- 
  then
- 
   #komutlar
-  
  elif[ kosul2 ]
- 
  then
- 
   #komutlar
-  
  else
   #komutlar
  fi
