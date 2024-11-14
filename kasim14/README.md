@@ -15,43 +15,39 @@ Girdi Cıktı islemleri
 
 - echo "isim,yas:"
   read isim yas -> her enterda digeri degiskene gecer
-
- - ornek5.sh
 ******************************************************************
 
 * Kosullu Yapılar
 -----------------------------------------------------------------
  if[ kosul ] -> bosluklara dikkat
- then
-	#komutlar
+ 	then
+		#komutlar
  fi
 
  -----------------------------
  if[ kosul ]
- then
-	#komutlar
+	 then
+		#komutlar
  else
-	#komutlar
+		#komutlar
  fi
 -------------------------------
 
  if[ kosul1]
- then
-	#komutlar
+ 	then
+		#komutlar
  elif[ kosul2 ]
- then
-	#komutlar
+ 	then
+		#komutlar
  else
-	#komutlar
+		#komutlar
  fi
 --------------------------------
 * Kosullu Yapılar
- -eq ==
- -ne !=
- -gt >
- -lt <
- -ge >=
- -le <=
+- -eq ==
+- -ne !=
+- -gt >
+- -lt <
+- -ge >=
+- -le <=
 --------------------------------
-ornek6.sh
-uygulama6.sh
