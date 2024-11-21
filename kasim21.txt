@@ -1,0 +1,74 @@
+- Döngüler
+ ➢ For Döngüsü
+ ➢ While Döngüsü
+ ➢ Until Döngüsü
+
+ FOR
+
+for i in {1..5} //1’den 5’e kadar 5 dahil
+do
+ echo "Sayı: $i"
+done
+----------------------------------------
+for i in {1..10..2} //adımlı iterasyon
+do
+ echo "Çift sayı değil: $i"
+done
+----------------------------------------
+for meyve in "${meyveler[@]}"
+do 
+ echo "Meyve: $meyve"
+done
+----------------------------------------
+for i in "${meyveler[@]}"
+do
+ echo "İndis $i: ${meyveler[$i]}"
+done
+----------------------------------------
+for ((başlangıç; koşul; artış))
+do
+ # Döngüde yapılacak işlemler
+done
+---------------------------------------
+for ((i=1; i<=10; i+=2)); do
+ echo $i
+done
+------------------------------------
+
+ WHİLE
+
+counter=1
+while [ $counter -le 5 ]
+do
+ echo "Sayaç: $counter"
+ ((counter++))
+done
+-----------------------------------
+ UNTİL
+
+counter=1
+until [ $counter -gt 5 ]
+do
+ echo "Sayaç: $counter"
+ ((counter++))
+done
+-------------------------------------
+
+ FONKSİYONLAR
+
+# Fonksiyon tanımlama
+merhaba() {
+ echo "Merhaba, Bash Script!"
+}
+# Parametre alan fonksiyon
+toplama() {
+ echo "Sonuç: $(($1 + $2))"
+}
+# Fonksiyon çağırma
+merhaba
+toplama 5 7
+
+--------------------------------------
+ornek8
+ornek8.1
+
