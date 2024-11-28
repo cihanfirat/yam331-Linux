@@ -1,0 +1,65 @@
+public ip -> dışarıya çıkarken kullanılır 
+private ip -> sistemimizdeki ağ arayüzlerini atanir
+
+ifconfig - sistemdeki aktif olan ağ arayüzlerini ve ip adreslerini listeler
+eth0 - ethernet bağlantısı
+inet adr: private ip
+
+ip - daha yeni, çıktısı benzer
+
+DNS (domain name system) - internetteki cihazların isimlerini ip adreslerine çevirir
+alan adi -> ip adresi
+
+1- tarayıcıya alan adi yazilir
+2- önce kendi dns cacheine bakar varsa ordan alır
+3- yoksa dns sunucusuna gönderir
+4- sunucu eşleşen ipyi gönderir
+5- tarayici ip adresine baglanarak web sitesini yukler.
+nslookup google.com
+
+ping -  cihazlar arası bağlantı calısıyor mu?
+ping www.google.com
+ping ipadress
+
+static ip - değişmez - sunucular,yazıcılar,ağ cihazları, yönetimi zor
+
+dynmaic ip - değişir - kişisel cihazlar, yönetimi kolay
+DHPC (dynamic host configuration protocol) tarafından otomatik olarak elde edilir
+
+netplan - dynamic ip ayarlama
+sudo nano /etc/netplan/01-netcfg.yaml -> dosyasında dhcp4: true
+sudo netplan apply -> degisiklikler uygulandı
+
+statik ip ayarlama
+dhcp4: no
+adress: static ip
+gatewat4: network gateway
+nameserver: dns sunuculari
+sudo netplan apply
+
+SSH(Secure shell)
+bir ağ üzerinden başka bir bilgisayara bağlanmak
+ssh kullaniciadi@sunucuİp
+ssh root@192.168.1.100
+
+dosya aktarma
+scp dosya.txt kullaniciadi@sunucuip:/hedef_dizin
+rsync - dosya dizinleri yerel sistemde veya uzak bir sistemde eşitlemek
+rsync -av /home/kullanici/klasor /backup/ 
+-a arsiv modu tüm dosya izinlerini,zaman damgalarını ve sembolik bağlantıları korur.
+-v ayrıntılı mod, işlem sırasında yapılanları gösterir.
+rsync -av dosya.txt kullanici@ip:/home kullanici -> yerelden uzak bir sunucuya dosya gondermek
+rsync -av --delete /kaynakdizin/ /hedef/dizin -> kaynakta silinenleri hedefte de siler
+
+ag guvenligi (güvenlik duvari UFW)
+ufw - uncomplicated firewall
+sudo ufw status
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow 22  (port numarasina izin ver)
+sudo ufw allow from 192.168.1.100
+sudo ufw allow 1000:2000/tcp
+sudo ufw deny 22
+sudo ufw deny from 192.168.1.50
+sudo ufw delete allow 22
+
