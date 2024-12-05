@@ -1,0 +1,90 @@
+Yedekleme Araçları
+4. Otomasyon Araçları
+backup-manager:
+• Yedekleme işlemlerini otomatikleştiren, hem yerel hem de uzak sunuculara
+yedekleme yapabilen, basit ve çok yönlü bir araçtır.
+
+borgbackup:
+• Verimli sıkıştırma ve güçlü şifreleme özellikleriyle fiziksel ortamlar için
+optimize edilmiş, hızlı ve güvenli bir yedekleme aracıdır.
+• /home/user/data dizini sıkıştırılmış ve şifrelenmiş olarak /mnt/backup/borgrepo deposuna yedeklenir.
+Kurulum:
+sudo apt install borgbackup
+Depo (Repository) Oluşturma:
+borg init --encryption=repokey /mnt/backup/borg-repo
+Yedekleme Yapma:
+borg create /mnt/backup/borg-repo::backup-$(date +%Y%m%d) /home/user/data
+Yedekleme İçeriğini Görüntüleme:
+borg list /mnt/backup/borg-repo
+
+duplicity:
+• Artımlı yedekleme yapabilen, bulut tabanlı depolama hizmetleriyle kolayca
+entegre olabilen, modern bir yedekleme çözümüdür.
+• Yerel bir dizini (/home/user/data) AWS S3’e artımlı olarak yedekleyen ve
+gerektiğinde geri yükleyen bir örnek:
+Kurulum:
+sudo apt install duplicity
+AWS S3 Ayarları: AWS erişim bilgilerinizi çevresel değişkenler olarak tanımlayın:
+export AWS_ACCESS_KEY_ID="your-access-key"
+export AWS_SECRET_ACCESS_KEY="your-secret-key "
+Yedekleme Yapma:
+duplicity /home/user/data s3://bucket-name/folder/
+Yedekten Geri Yükleme:
+duplicity restore s3://bucket-name/folder/ /home/user/restore
+
+Yedekleme Senaryoları
+a. Yerel Yedekleme
+• Yedekleme işlemi, aynı makinede veya bağlı bir harici depolama cihazında
+yapılır.
+rsync -av /kaynak/dizin /yerel/yedek/dizin
+
+b. Uzaktan Yedekleme (Remote Backup)
+• Yedekleme işlemi, farklı bir makinede veya uzak bir sunucuda
+gerçekleştirilir.
+• SSH, FTP veya bulut depolama hizmetleri ile yapılabilir.
+rsync -avz /kaynak/dizin kullanıcı@uzak-sunucu:/yedek/dizin
+
+c. Bulut Yedekleme (Cloud Backup)
+• Yedekleme işlemi, bulut tabanlı bir hizmet kullanılarak yapılır (örneğin,
+Google Drive, AWS S3, Dropbox).
+• Veri, internet üzerinden güvenli bir şekilde bulut depolama alanına aktarılır
+aws s3 cp /kaynak/dizin s3://yedekleme-bucket --recursive //(AWS CLI ile S3’ye
+yedekleme)
+
+d. Ağ Üzerinden Yedekleme (NFS, SSH, FTP vs.)
+• Veriler ağ üzerindeki başka bir cihaz veya sunucuya yedeklenir.
+• NFS (Network File System), SSH, veya FTP gibi protokoller kullanılır.
+NFS Bağlantısı Yapılandırması:
+sudo mount nfs-server:/yedek/dizin /mnt/nfs
+Yedekleme İşlemi:
+rsync -av /kaynak/dizin /mnt/nfs
+
+Kurtarma (Restore) Süreci
+1. Yedeklerden veri kurtarma
+• tar ile Geri Yükleme
+tar -xvzf backup.tar.gz -C /hedef/dizin
+• rsync ile Geri Yükleme
+rsync -av /yedek/dizin /orijinal/dizin
+
+2. Bozuk dosyaların veya kaybolan sistemlerin onarımı
+• fsck ile Dosya Sistemi Onarımı
+fsck, dosya sistemlerindeki hataları tespit etmek ve onarmak için kullanılan bir araçtır. Özellikle, sistemdeki hatalı durumları
+otomatik veya manuel olarak düzeltmek için çok etkilidir.
+fsck /dev/sda1 //Bu komut, disk hatalarını kontrol eder ve onarır.
+/dev/sda1: Onarılacak dosya sistemi ya da disk bölümü.
+Bu komut, dosya sistemindeki hataları kontrol eder ve çözüm önerir.
+fsck komutu çalıştırmadan önce hedef disk bölümünün kullanılmıyor olması gerekir (unmount edilmelidir).
+Aksi halde veri kaybı yaşanabilir.
+sudo umount /dev/sda1
+
+Örnek Uygulama:
+• Bir diskin hatalı olduğunu varsayalım (/dev/sda1).
+• Önce dosya sisteminin bağlı olmadığından emin olun
+sudo umount /dev/sda1
+• fsck ile kontrol ve onarım yapın
+sudo fsck -y /dev/sda1
+• Onarım tamamlandığında sistemi yeniden başlatabilirsiniz.
+***Her dosya sistemi türü için farklı onarım araçları kullanılır. Linux sistemlerinde
+yaygın olarak ext4 kullanılmaktadır. Bu tür için fsck kullanılır.
+df –T //Bu komut, bağlı (mounted) disk bölümleri hakkında bilgi verir ve dosya
+sisteminin türünü gösterir.
