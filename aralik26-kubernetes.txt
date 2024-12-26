@@ -1,0 +1,39 @@
+kubernetes
+
+kubectl get pods //calısan podları ve durumlarını listeler
+
+kubectl get services //tüm servislerin durumunu ve bağlantı noktalarını gösterir
+
+kubectl get deployments // clusterda calıstan tüm deploymentları listeler
+
+kubectl get node // clustterdaki tüm nodeları ve durumlarını gösterir
+
+kubectl get all // tüm kaynakları görüntüler
+
+kubectl apply -f pod.yaml //pod olusturur -f filname
+apiVersion hangi versiyon
+kind kaynak türü pod,deployment,node ...
+metadata kaynaga ait kimlik bilgileri
+  name podun adını belirtir (cluster içinde unique olmalı)
+spec kaynagın özellikleri tanımlar
+  containers pod içinde calısacak konteynerlerin listesini icerir
+  -name konteynır adı
+   image kullanılacak imaj
+kubectl apply
+
+önce cluster kur sonra yapını içerde olustur.
+1. Initializes cluster master node:
+kubeadm init ...
+2. initialize cluster networking:
+kubectl apply -f
+3. optional -> create an nginx deployment
+
+
+
+kubctl logs [podname] //podların loglarını görüntüle -f gercek zamanlı
+kubectl exec -it [podname] --[command] //podda komut calıstırma
+kubectl exec -it my-pod --ls
+
+kubectl exec -it [pod-name] --/bin/bash //podun içine girer
+
+kubectl delete pod [podname] //podu siler
